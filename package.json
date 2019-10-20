@@ -1,0 +1,21 @@
+{
+  "name": "confluera-parcel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "pro": "parcel build src/index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.23.0"
+  },
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "jquery-ui-dist": "^1.12.1"
+  }
+}

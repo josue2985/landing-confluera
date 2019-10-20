@@ -1,0 +1,233 @@
+@import "./abstracts/menu";
+@import "./abstracts/variables";
+@import url("https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900&display=swap&subset=latin-ext");
+
+::selection {
+  background: $primary;
+}
+
+body {
+  font-family: $font-stack;
+  background: $background;
+  font-size: 18px;
+  color: $lighten-text;
+}
+
+a {
+  color: $lighten-text;
+  transition: all 0.25s ease-in;
+  &:hover {
+    color: rgba($primary, 1);
+  }
+}
+
+/******************************/
+/*****      HELPERS      *****/
+/****************************/
+
+.main-title {
+  font-size: 3.5em;
+  font-weight: 100;
+  line-height: 1.2;
+}
+
+.sub-title {
+  font-size: 1.5em;
+  font-weight: 100;
+}
+
+/******************************/
+/*****      BUTTONS      *****/
+/****************************/
+
+.btn-primary {
+  border-radius: 5px;
+  color: $lighten-text;
+  background: transparent;
+  border-width: 2px;
+  border-color: transparentize($primary, 0);
+  transition: all 0.38s ease-in;
+  &:hover {
+    color: $darken-text;
+    background: rgba($primary, 1);
+    border-color: transparentize($primary, 1);
+  }
+  &:not(:disabled):not(.disabled):active {
+    color: $darken-text;
+    background: rgba($primary, 1);
+    border-color: transparentize($primary, 1);
+  }
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+/******************************/
+/*****   NAVBAR STYLES   *****/
+/****************************/
+
+nav {
+  .container-fluid {
+    padding: 0px 70px;
+  }
+  img {
+    width: 15%;
+  }
+}
+
+.sticky-top {
+  padding: 20px 10px;
+  background: transparentize($menubackground, 0.7);
+  // background: $menubackground;
+  transition: all 0.25s ease-in;
+}
+
+.stuck .sticky-top {
+  background: transparentize($menubackground, 0.8);
+  // color: darken($menubackground, 80%);
+  padding: 20px 10px;
+}
+
+/******************************/
+/*****   INTRO SECTION   *****/
+/****************************/
+
+.intro-section {
+  .header.bg {
+    height: 90vh;
+    background: $background;
+    // background-image: url('https://visualhunt.com/photos/xl/7/wood-cottage-wood-house-cabine.jpg');
+    // background-size: cover;
+    // background-position: center;
+  }
+}
+
+/******************************************/
+/*****   FEATURES APPROACH SECTION   *****/
+/****************************************/
+
+.features-approach {
+  .header.bg {
+    height: 60vh;
+    background: $background;
+  }
+  .row.title {
+    margin-bottom: 80px;
+  }
+  .row.items {
+    width: 80%;
+    .feature-icon {
+      svg {
+        width: 150px;
+        g {
+          fill: $primary;
+        }
+      }
+    }
+    p {
+      margin-top: 30px;
+      line-height: 1.7;
+    }
+  }
+}
+
+/******************************************/
+/*****    TABS FEATURES SECTION      *****/
+/****************************************/
+.tabs-features {
+  .header.bg {
+    // height: 60vh;
+    background: $background;
+  }
+  .row.title {
+    margin-bottom: 80px;
+  }
+  .row.items {
+    width: 90%;
+    ul#tabs {
+        list-style-type: none;
+      }
+      
+      ul#tabs li {
+        display: inline-block;
+        padding-top: 18px;
+        width: 33%;
+        opacity: 0.5;
+        border: 0;
+        border-radius: 0;
+        border-top: 1.5px solid transparentize($lighten-text, 0.8);
+        color: $lighten-text;
+        transition: all 0.38s ease-in;
+      }
+      
+      ul#tabs li.selected {
+        opacity: 1;
+        color: $lighten-text;
+        background-color: transparent;
+        border-color: $primary;
+      }
+      
+      ul#tabs li:hover {
+        opacity: 1;
+      }
+      
+      ul#tabs li a {
+        color: $lighten-text;
+        text-decoration: none;
+        font-size: 1em;
+        text-transform: capitalize;
+        font-weight: bold;
+      
+        p {
+          font-size: 0.9em;
+          font-weight: 200;
+        }
+      }
+      
+      ul#tabs li a:hover {
+        opacity: 1;
+      }
+      
+      div.tabContent {
+        display: none;
+      }
+  }
+}
+
+/******************************/
+/*****   FEATURES ITEMS   ****/
+/****************************/
+
+.features-items {
+    .header.bg {
+      // height: 60vh;
+      background: $background;
+      padding: 150px 0px;
+    }
+    .row.title {
+      margin-bottom: 80px;
+    }
+    .row.items {
+      width: 80%;
+      .feature-icon {
+        svg {
+          width: 150px;
+          g {
+            fill: $primary;
+          }
+        }
+      }
+      p {
+        margin-top: 30px;
+        line-height: 1.7;
+      }
+    }
+  }
+
+#video {
+  position: fixed;
+}
+
+#long {
+  height: 20000px;
+}
