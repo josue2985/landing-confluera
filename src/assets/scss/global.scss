@@ -1,6 +1,6 @@
 @import "./abstracts/menu";
 @import "./abstracts/variables";
-@import url("https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900&display=swap&subset=latin-ext");
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900&display=swap');
 
 ::selection {
   background: $primary;
@@ -26,8 +26,8 @@ a {
 /****************************/
 
 .main-title {
-  font-size: 3.5em;
-  font-weight: 100;
+  font-size: 4.1em;
+  font-weight: bold;
   line-height: 1.2;
 }
 
@@ -89,16 +89,65 @@ nav {
 }
 
 /******************************/
+/*****   INTRO VIDEO   *******/
+/****************************/
+
+.intro-video {
+  height: 100vh;
+  .wrapper {
+    position: sticky;
+    top: 35%;
+    width: 100%;
+    height: 25vh;
+    transform: translate3d(0px, 0px, 0px);
+    padding: 0px !important;
+    video {
+      height: auto;
+      user-select: none;
+      pointer-events: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      z-index: 1;
+      max-width: 160vh;
+      &.intro-laptop {
+        opacity:1;
+      }
+    }
+  }
+  figcaption {
+    position: absolute;
+    //top: 18%;
+    left: 0px;
+    right: 0px;
+    // transform: translateY(-67px);
+    .intro-title-line1, .intro-title-line2 {
+      opacity:0;
+      transform: translateY(30px);
+    }
+  }
+  .long {
+    height:550px;
+  }
+}
+
+/******************************/
 /*****   INTRO SECTION   *****/
 /****************************/
 
 .intro-section {
+  transition: all 0.25s ease-in;
+  opacity:0;
   .header.bg {
     height: 90vh;
-    background: $background;
     // background-image: url('https://visualhunt.com/photos/xl/7/wood-cottage-wood-house-cabine.jpg');
     // background-size: cover;
     // background-position: center;
+  }
+  &.show {
+    opacity:1;
   }
 }
 
@@ -223,11 +272,3 @@ nav {
       }
     }
   }
-
-#video {
-  position: fixed;
-}
-
-#long {
-  height: 20000px;
-}
