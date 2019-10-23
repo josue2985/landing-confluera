@@ -17,8 +17,9 @@
     />
   </head>
   <body>
+    
     <span class="position-absolute trigger"
-      ><!-- hidden trigger to apply 'stuck' styles --></span
+      ></span
     >
     <nav class="navbar navbar-expand-sm sticky-top">
       <div class="container-fluid">
@@ -37,21 +38,20 @@
         </button>
         <div class="collapse navbar-collapse" id="navbar1">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
+            <!-- <li class="nav-item active">
               <a class="nav-link mt-1" href="#">Features</a>
             </li>
             <li class="nav-item mt-1">
               <a class="nav-link" href="#">Contacto</a>
-            </li>
+            </li>-->
             <li class="nav-item ml-4">
               <button class="btn btn-primary btn-lg">Subscribirme</button>
             </li>
-          </ul>
+          </ul> 
         </div>
       </div>
     </nav>
 
-    <!-- <h1>ESTO ESTO</h1> -->
     <section class="intro-video text-center">
       <div class="wrapper">
           <figure>
@@ -64,11 +64,13 @@
         <div class="container-fluid header bg">
             <div class="row align-items-center h-100">
               <div class="col-9 mx-auto">
-                <div class="intro-title-line1 main-title text-center">
+                <div id="mevoy" class="intro-title-line1 main-title text-center">
                   La herramienta mas poderosa de
                 </div>
-                <span class="intro-title-line2 main-title text-center">
-                    Revision & Feedback
+                <span
+                data-period="2000"
+                data-rotate='[ "Revision y Feedback.", "simple.", "vanilla JS.", "fun!" ]'
+                class="txt-rotate intro-title-line2 main-title text-center">
                   </span>
                 
               </div>
@@ -77,22 +79,10 @@
     </figcaption> 
 
 
-      <div id="long"></div>
+    <div id="long"></div>
     </section>
-    <!-- <section id="intro-section" class="intro-section">
-      <div class="container-fluid header bg">
-        <div class="row align-items-center h-100">
-          <div class="col-9 mx-auto">
-            <div class="main-title text-center">
-              La herramienta mas poderosa de
-              <p>Revision & Feedback</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
 
-    <section class="features-approach">
+    <section id="features-approach" class="features-approach">
       <div class="container-fluid header bg">
         <div class="title row text-center">
           <div class="col-12 mx-auto">
@@ -276,16 +266,11 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> 
 
-    <!-- // video controller // <video
-        id="video"
-        src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
-      ></video>
-      <div id="long"></div> -->
-
-    <script src="./index.js"></script>
-    <script
+    
+   
+      <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
       crossorigin="anonymous"
@@ -295,10 +280,14 @@
       integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
       crossorigin="anonymous"
     ></script>
+
+    <script src="./index.js"></script>
+
     <script
       src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+    
   </body>
 </html>
